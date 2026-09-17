@@ -25,7 +25,7 @@ const skills = {
   'Software Development': ['Laravel', 'Vue.js', 'TypeScript', 'PHP', 'Inertia.js', 'Tailwind CSS', 'REST APIs', 'WebCrypto API'],
   'Databases': ['Oracle', 'SQL Server', 'MySQL', 'SQL', 'PL/SQL'],
   'Programming & Data': ['Python', 'PySpark', 'JavaScript'],
-  'Cloud & Infrastructure': ['Azure Fabric', 'Cloudflare R2', 'Nginx', 'Git', 'SVN', 'CI/CD', 'Vite', 'Unix'],
+  'Cloud & Infrastructure': ['Microsoft Fabric (DP-700 Certified)', 'Cloudflare R2', 'Nginx', 'Git', 'SVN', 'CI/CD', 'Vite', 'Unix'],
 };
 
 const experience = [
@@ -33,7 +33,7 @@ const experience = [
     company: 'Tata Consultancy Services (TCS) — Equity Insurance Ltd',
     role: 'ETL Developer',
     type: 'Full-time',
-    period: 'Dec 2025 – Jul 2026',
+    period: 'Dec 2025 – Current',
     location: 'India',
     bullets: [
       'Developed and supported Informatica ETL mappings to load agent and policy data from relational sources into the enterprise data warehouse.',
@@ -100,6 +100,29 @@ const projects = [
   },
 ];
 
+const certifications = [
+  {
+    title: 'Microsoft Certified: Fabric Data Engineer Associate',
+    badgeName: 'DP-700',
+    issuer: 'Microsoft',
+    issueDate: 'Sep 2026',
+    expiryDate: 'Sep 2027',
+    credentialId: '39D45A75476D666',
+    certNumber: '64B499-B8ED83',
+    url: 'https://learn.microsoft.com/api/credentials/share/en-us/ShreyashPawar-7164/39D45A75476D666?sharingId',
+    accent: '#0078D4',
+    skills: [
+      'Ingest & Transform Data',
+      'Lakehouse & Warehouse Modeling',
+      'Medallion Architecture (Bronze/Silver/Gold)',
+      'Dataflow Gen2 & Copy Jobs',
+      'PySpark & Delta Lake',
+      'Monitor & Optimize Analytics Solutions',
+    ],
+    description: 'Demonstrates technical expertise in designing, building, and maintaining enterprise analytics and data engineering solutions using Microsoft Fabric — encompassing data ingestion, Lakehouse/Warehouse modeling, Delta tables, transformation pipelines, and analytics optimization.',
+  },
+];
+
 const education = [
   {
     institution: 'University of Mumbai',
@@ -113,21 +136,21 @@ const education = [
 
 <template>
   <Head>
-    <title>Shreyash Pawar — ETL Developer & Software Engineer</title>
-    <meta name="description" content="Portfolio of Shreyash Pawar — ETL Developer specializing in Informatica PowerCenter and Full-Stack Software Engineer. Creator of Ilusion Vault, a zero-knowledge encrypted platform." />
+    <title>Shreyash Pawar — ETL Developer & Certified Fabric Data Engineer</title>
+    <meta name="description" content="Portfolio of Shreyash Pawar — ETL Developer specializing in Informatica PowerCenter and Microsoft Certified: Fabric Data Engineer Associate (DP-700). Creator of Ilusion Vault." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://shreyash.ilusion.io/" />
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://shreyash.ilusion.io/" />
-    <meta property="og:title" content="Shreyash Pawar — ETL Developer & Software Engineer" />
-    <meta property="og:description" content="ETL Developer at TCS & Full-Stack Software Engineer. Creator of Ilusion Vault — a zero-knowledge encrypted file vault and secret sharing platform." />
+    <meta property="og:title" content="Shreyash Pawar — ETL Developer & Certified Fabric Data Engineer" />
+    <meta property="og:description" content="ETL Developer at TCS & Microsoft Certified: Fabric Data Engineer Associate (DP-700). Creator of Ilusion Vault." />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Shreyash Pawar — ETL Developer & Software Engineer" />
-    <meta name="twitter:description" content="ETL Developer at TCS & Full-Stack Software Engineer. Creator of Ilusion Vault — a zero-knowledge encrypted file vault and secret sharing platform." />
+    <meta name="twitter:title" content="Shreyash Pawar — ETL Developer & Certified Fabric Data Engineer" />
+    <meta name="twitter:description" content="ETL Developer at TCS & Microsoft Certified: Fabric Data Engineer Associate (DP-700). Creator of Ilusion Vault." />
   </Head>
 
   <div class="portfolio-page bg-[#f7f9fb] text-[#191c1e] min-h-screen flex flex-col dot-grid">
@@ -140,6 +163,10 @@ const education = [
           Shreyash Pawar
         </span>
         <div class="flex items-center gap-3">
+          <a href="#certifications" class="pf-nav-link hidden sm:inline-flex">
+            <span class="material-symbols-outlined text-[16px] text-[#0078D4]">verified</span>
+            Certifications
+          </a>
           <a href="mailto:shreyash.pawarr1@gmail.com" class="pf-nav-link hidden sm:inline-flex">
             <span class="material-symbols-outlined text-[16px]">mail</span>
             Contact
@@ -172,15 +199,27 @@ const education = [
 
             <!-- Info -->
             <div class="text-center md:text-left flex-1 min-w-0">
-              <span class="badge mb-4">
-                <span class="badge-dot"></span>
-                Available for opportunities
-              </span>
+              <div class="flex flex-wrap items-center justify-center md:justify-start gap-2.5 mb-4">
+                <span class="badge">
+                  <span class="badge-dot"></span>
+                  Available for opportunities
+                </span>
+                <a :href="certifications[0].url" target="_blank" rel="noopener noreferrer" class="badge-cert" title="View Microsoft Certified: Fabric Data Engineer Associate Credential">
+                  <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none">
+                    <rect x="2" y="2" width="9.5" height="9.5" rx="1" fill="#F25022"/>
+                    <rect x="12.5" y="2" width="9.5" height="9.5" rx="1" fill="#7FBA00"/>
+                    <rect x="2" y="12.5" width="9.5" height="9.5" rx="1" fill="#00A4EF"/>
+                    <rect x="12.5" y="12.5" width="9.5" height="9.5" rx="1" fill="#FFB900"/>
+                  </svg>
+                  <span>DP-700 Certified · Fabric Data Engineer</span>
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                </a>
+              </div>
               <h1 class="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-bold leading-none tracking-tight text-[#191c1e] mb-3">
                 Shreyash<br /><span class="text-accent">Pawar</span>
               </h1>
               <p class="font-body text-base sm:text-lg text-[#3c4a41] mb-6 max-w-xl leading-relaxed">
-                ETL Developer with 2.5+ years of experience in Data Warehousing and BI, specializing in Informatica PowerCenter. Full-stack software engineer and creator of <span class="text-accent font-semibold">Ilusion Vault</span> — a zero-knowledge encrypted platform.
+                ETL Developer with 2.5+ years of experience in Data Warehousing and BI, specializing in Informatica PowerCenter &amp; Microsoft Fabric. Certified Fabric Data Engineer Associate (DP-700) and creator of <span class="text-accent font-semibold">Ilusion Vault</span> — a zero-knowledge encrypted platform.
               </p>
 
               <!-- Contact row -->
@@ -293,6 +332,110 @@ const education = [
                   {{ b }}
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Licenses & Certifications -->
+      <section id="certifications" class="section-wrapper bg-white border-y border-[#e0e3e5]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-8">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-8">
+            <h2 class="section-title !mb-0">Licenses &amp; Certifications</h2>
+            <span class="text-xs font-semibold text-[#0078D4] bg-[#0078D4]/10 border border-[#0078D4]/20 px-2.5 py-1 rounded-full flex items-center gap-1.5 self-start sm:self-auto">
+              <span class="material-symbols-outlined text-[15px] text-[#0078D4]">verified</span>
+              Microsoft Certified Official Credential
+            </span>
+          </div>
+
+          <div class="flex flex-col gap-6">
+            <div
+              v-for="(cert, i) in certifications"
+              :key="i"
+              class="cert-card vault-card rounded-2xl p-6 sm:p-8 relative overflow-hidden border-[#0078D4]/30 hover:border-[#0078D4]"
+            >
+              <div class="cert-glow"></div>
+
+              <div class="relative z-10 flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                <!-- Left Details -->
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-start gap-4">
+                    <!-- Microsoft Badge Logo -->
+                    <div class="w-13 h-13 sm:w-16 sm:h-16 rounded-xl bg-[#f0f6ff] border border-[#0078D4]/25 flex items-center justify-center flex-shrink-0 shadow-sm p-3">
+                      <svg class="w-full h-full" viewBox="0 0 24 24" fill="none">
+                        <rect x="1" y="1" width="10" height="10" rx="1.5" fill="#F25022"/>
+                        <rect x="13" y="1" width="10" height="10" rx="1.5" fill="#7FBA00"/>
+                        <rect x="1" y="13" width="10" height="10" rx="1.5" fill="#00A4EF"/>
+                        <rect x="13" y="13" width="10" height="10" rx="1.5" fill="#FFB900"/>
+                      </svg>
+                    </div>
+
+                    <div class="flex-1 min-w-0">
+                      <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                        <span class="px-2 py-0.5 rounded text-[11px] font-bold tracking-wider uppercase bg-[#0078D4] text-white">
+                          {{ cert.badgeName }}
+                        </span>
+                        <span class="inline-flex items-center gap-1 text-xs font-semibold text-[#0078D4] bg-[#eef5fc] px-2 py-0.5 rounded border border-[#0078D4]/20">
+                          <span class="material-symbols-outlined text-[13px]">verified</span>
+                          Verified Credential
+                        </span>
+                      </div>
+
+                      <h3 class="font-display text-xl sm:text-2xl font-bold text-[#191c1e] leading-snug">
+                        {{ cert.title }}
+                      </h3>
+                      <p class="text-sm font-medium text-[#515f74] mt-0.5">
+                        Issued by <strong class="text-[#191c1e]">{{ cert.issuer }}</strong> · Valid: {{ cert.issueDate }} – {{ cert.expiryDate }}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="text-sm text-[#3c4a41] leading-relaxed mt-4 mb-4">
+                    {{ cert.description }}
+                  </p>
+
+                  <!-- Skills tags -->
+                  <div class="mb-4">
+                    <span class="block text-xs font-semibold text-[#515f74] uppercase tracking-wider mb-2">Skills Measured &amp; Verified</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <span
+                        v-for="s in cert.skills"
+                        :key="s"
+                        class="skill-tag !bg-[#f0f6ff] !text-[#005a9e] !border-[#0078D4]/20"
+                      >
+                        {{ s }}
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Credential ID & Cert Number -->
+                  <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[#515f74] pt-3 border-t border-[#e0e3e5]">
+                    <div>
+                      Credential ID: <span class="font-mono font-semibold text-[#191c1e] bg-[#f7f9fb] px-1.5 py-0.5 rounded border border-[#e0e3e5]">{{ cert.credentialId }}</span>
+                    </div>
+                    <div>
+                      Certification Number: <span class="font-mono font-semibold text-[#191c1e] bg-[#f7f9fb] px-1.5 py-0.5 rounded border border-[#e0e3e5]">{{ cert.certNumber }}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Action Button -->
+                <div class="flex md:flex-col items-start md:items-end justify-between gap-3 flex-shrink-0 pt-2 md:pt-0">
+                  <a
+                    :href="cert.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="verify-cert-btn"
+                  >
+                    <span>Verify Credential</span>
+                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                  </a>
+                  <span class="text-[11px] text-[#515f74] flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[13px] text-[#0078D4]">link</span>
+                    learn.microsoft.com
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -586,6 +729,63 @@ const education = [
 /* Projects */
 .project-card { transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; }
 .project-card:hover { transform: translateY(-2px); }
+
+/* Certifications */
+.badge-cert {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f6ff;
+  border: 1px solid rgba(0, 120, 212, 0.3);
+  color: #005a9e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+.badge-cert:hover {
+  background: #e1effe;
+  border-color: #0078d4;
+  transform: translateY(-1px);
+}
+.cert-card {
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.cert-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 120, 212, 0.12), 0 8px 10px -6px rgba(0, 120, 212, 0.06);
+}
+.cert-glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(0, 120, 212, 0.09) 0%, transparent 70%);
+  pointer-events: none;
+}
+.verify-cert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  background: #0078D4;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(0, 120, 212, 0.25);
+}
+.verify-cert-btn:hover {
+  background: #005a9e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.35);
+}
 
 .context-badge {
   display: inline-flex;
