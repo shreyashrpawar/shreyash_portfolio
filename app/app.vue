@@ -141,23 +141,23 @@ const education = [
         </span>
         <div class="flex items-center gap-3">
           <a href="#experience" class="pf-nav-link hidden sm:inline-flex">
-            <span class="material-symbols-outlined text-[16px]">work</span>
+            <AppIcon name="work" class="w-4 h-4" />
             Experience
           </a>
           <a href="#projects" class="pf-nav-link hidden sm:inline-flex">
-            <span class="material-symbols-outlined text-[16px]">code</span>
+            <AppIcon name="code" class="w-4 h-4" />
             Projects
           </a>
           <a href="#education" class="pf-nav-link hidden sm:inline-flex">
-            <span class="material-symbols-outlined text-[16px]">school</span>
+            <AppIcon name="school" class="w-4 h-4" />
             Education
           </a>
           <a href="mailto:shreyashrpawar28@gmail.com" class="pf-nav-link hidden sm:inline-flex">
-            <span class="material-symbols-outlined text-[16px]">mail</span>
+            <AppIcon name="mail" class="w-4 h-4" />
             Contact
           </a>
           <a href="/shreyash_pawar.pdf" download="shreyash_pawar.pdf" target="_blank" class="pf-nav-resume">
-            <span class="material-symbols-outlined text-[16px]">download</span>
+            <AppIcon name="download" class="w-4 h-4" />
             Resume
           </a>
           <a href="https://www.linkedin.com/in/shreyash-pawar28/" target="_blank" rel="noopener noreferrer" class="pf-nav-link hidden sm:inline-flex">
@@ -209,7 +209,7 @@ const education = [
                   target="_blank"
                   class="download-btn"
                 >
-                  <span class="material-symbols-outlined text-[18px]">download</span>
+                  <AppIcon name="download" class="w-[18px] h-[18px]" />
                   <span>Download Resume</span>
                 </a>
                 <a
@@ -218,7 +218,7 @@ const education = [
                   rel="noopener noreferrer"
                   class="preview-btn"
                 >
-                  <span class="material-symbols-outlined text-[18px]">visibility</span>
+                  <AppIcon name="visibility" class="w-[18px] h-[18px]" />
                   <span>View PDF</span>
                 </a>
               </div>
@@ -226,19 +226,19 @@ const education = [
               <!-- Contact row -->
               <div class="flex flex-wrap justify-center md:justify-start gap-2.5 mb-3">
                 <a href="mailto:shreyashrpawar28@gmail.com" class="chip-btn">
-                  <span class="material-symbols-outlined text-[16px]">mail</span>
+                  <AppIcon name="mail" class="w-4 h-4" />
                   shreyashrpawar28@gmail.com
                 </a>
                 <a href="tel:9420784253" class="chip-btn">
-                  <span class="material-symbols-outlined text-[16px]">call</span>
+                  <AppIcon name="call" class="w-4 h-4" />
                   9420784253
                 </a>
                 <span class="chip-info">
-                  <span class="material-symbols-outlined text-[16px]">location_on</span>
+                  <AppIcon name="location_on" class="w-4 h-4" />
                   Thane, Maharashtra
                 </span>
                 <a href="https://shreyash.ilusion.io" target="_blank" rel="noopener noreferrer" class="chip-btn">
-                  <span class="material-symbols-outlined text-[16px]">language</span>
+                  <AppIcon name="language" class="w-4 h-4" />
                   shreyash.ilusion.io
                 </a>
               </div>
@@ -254,7 +254,7 @@ const education = [
                   GitHub
                 </a>
                 <a href="https://medium.com/@shreyash07" target="_blank" rel="noopener noreferrer" class="chip-btn">
-                  <span class="material-symbols-outlined text-[16px]">article</span>
+                  <AppIcon name="article" class="w-4 h-4" />
                   Medium
                 </a>
               </div>
@@ -283,7 +283,7 @@ const education = [
                   </div>
                   <ul class="space-y-2">
                     <li v-for="(b, j) in exp.bullets" :key="j" class="flex items-start gap-2 text-sm text-[#3c4a41] leading-relaxed">
-                      <span class="material-symbols-outlined text-[#00cc88] text-[16px] mt-0.5 flex-shrink-0" style="font-variation-settings: 'FILL' 1;">arrow_right</span>
+                      <AppIcon name="arrow_right" class="w-4 h-4 text-[#00cc88] mt-0.5 flex-shrink-0" />
                       {{ b }}
                     </li>
                   </ul>
@@ -314,7 +314,7 @@ const education = [
               </div>
               <ul class="space-y-2">
                 <li v-for="(b, j) in proj.bullets" :key="j" class="flex items-start gap-2 text-sm text-[#3c4a41] leading-relaxed">
-                  <span class="material-symbols-outlined text-[16px] mt-0.5 flex-shrink-0" :style="{ color: proj.accent }" style="font-variation-settings: 'FILL' 1;">arrow_right</span>
+                  <AppIcon name="arrow_right" class="w-4 h-4 mt-0.5 flex-shrink-0" :style="{ color: proj.accent }" />
                   {{ b }}
                 </li>
               </ul>
@@ -333,7 +333,7 @@ const education = [
                 <h3 class="font-semibold text-[#191c1e]">{{ edu.institution }}</h3>
                 <p class="text-sm text-[#3c4a41]">{{ edu.degree }}</p>
                 <p class="text-xs text-[#515f74] mt-1 flex items-center gap-1">
-                  <span class="material-symbols-outlined text-[14px]">location_on</span>
+                  <AppIcon name="location_on" class="w-3.5 h-3.5" />
                   {{ edu.location }}
                 </p>
               </div>
@@ -376,11 +376,11 @@ const education = [
             <p class="text-[#3c4a41] mb-8 relative z-10 max-w-md mx-auto">Open to full-time roles, freelance contracts, and interesting collaborations.</p>
             <div class="flex flex-wrap justify-center gap-4 relative z-10">
               <a href="/shreyash_pawar.pdf" download="shreyash_pawar.pdf" target="_blank" class="cta-primary">
-                <span class="material-symbols-outlined text-[18px]">download</span>
+                <AppIcon name="download" class="w-[18px] h-[18px]" />
                 Download Resume
               </a>
               <a href="mailto:shreyashrpawar28@gmail.com" class="cta-secondary">
-                <span class="material-symbols-outlined text-[18px]">mail</span>
+                <AppIcon name="mail" class="w-[18px] h-[18px]" />
                 Get in Touch
               </a>
               <a href="https://github.com/shreyashrpawar" target="_blank" rel="noopener noreferrer" class="cta-secondary">
@@ -392,7 +392,7 @@ const education = [
                 LinkedIn
               </a>
               <a href="https://medium.com/@shreyash07" target="_blank" rel="noopener noreferrer" class="cta-secondary">
-                <span class="material-symbols-outlined text-[18px]">article</span>
+                <AppIcon name="article" class="w-[18px] h-[18px]" />
                 Medium
               </a>
             </div>
@@ -698,19 +698,7 @@ const education = [
 .font-body { font-family: 'Hanken Grotesk', sans-serif; }
 .font-label-sm { font-family: 'Hanken Grotesk', sans-serif; letter-spacing: 0.08em; }
 
-.material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-}
+
 
 /* Standalone Portfolio Nav */
 .pf-nav {
