@@ -19,107 +19,79 @@ onMounted(() => {
   setTimeout(initLinkedInBadge, 150);
 });
 
-const skills = {
-  'ETL & Data Integration': ['Informatica PowerCenter 10.x', 'ETL', 'Data Warehousing', 'Change Data Capture (CDC)', 'Incremental Loading'],
-  'Informatica': ['Lookup', 'Router', 'Filter', 'Aggregator', 'Joiner', 'Sorter', 'Source Qualifier', 'Mapplets', 'Reusable Transformations', 'Mapping Parameters/Variables', 'Session Variables'],
-  'Software Development': ['Laravel', 'Vue.js', 'TypeScript', 'PHP', 'Inertia.js', 'Tailwind CSS', 'REST APIs', 'WebCrypto API'],
-  'Databases': ['Oracle', 'SQL Server', 'MySQL', 'SQL', 'PL/SQL'],
-  'Programming & Data': ['Python', 'PySpark', 'JavaScript'],
-  'Cloud & Infrastructure': ['Microsoft Fabric (DP-700 Certified)', 'Cloudflare R2', 'Nginx', 'Git', 'SVN', 'CI/CD', 'Vite', 'Unix'],
-};
-
 const experience = [
   {
-    company: 'Tata Consultancy Services (TCS) — Equity Insurance Ltd',
-    role: 'ETL Developer',
-    type: 'Full-time',
-    period: 'Dec 2025 – Current',
-    location: 'India',
+    company: 'Ilusion Vault',
+    role: 'Creator and Developer (Self-Employed)',
+    type: 'Self-Employed',
+    period: 'Apr 2026 – Current',
+    location: 'Remote',
     bullets: [
-      'Developed and supported Informatica ETL mappings to load agent and policy data from relational sources into the enterprise data warehouse.',
-      'Implemented business rules for calculating monthly compensation and incentive amounts and supported data processing for financial, management, and rejection reporting.',
-      'Designed mappings using Lookup, Router, Filter, Source Qualifier, Aggregator, Joiner, and Sorter transformations.',
-      'Optimized long-running ETL jobs through performance tuning at the mapping, session, and SQL levels.',
-      'Created reusable Mapplets and Transformations to improve modularity and reduce redundancy across ETL.',
-      'Analyzed Informatica job failures, performed root-cause analysis, and resolved production issues using documented processes.',
-      'Wrote SQL queries for data validation, troubleshooting, and ETL-related analysis.',
+      'Built a client-side zero-knowledge encryption flow (Web Crypto API + R2/S3 pre-signed uploads) ensuring the server never accesses plaintext data.',
+      'Engineered a high-performance encryption pipeline with Web Workers and key-caching, bulk-upload.',
+      'Designed and implemented a modern, premium UI (glass-morphism dashboard, responsive Vue components, vue-sonner toasts) that showcases encrypted file sharing and folder permissions.',
+      'Strengthened overall security by adding a strict Content-Security-Policy, extra HTTP headers, and front-end sanitization (DOMPurify) while maintaining full SEO compliance.',
     ],
     accent: '#00cc88',
   },
   {
-    company: 'Tata Consultancy Services (TCS) — Truist Financial Bank',
-    role: 'ETL Developer',
-    type: 'Full-time',
-    period: 'Feb 2024 – Nov 2025',
-    location: 'India',
+    company: 'SecretAlign',
+    role: 'Laravel Developer (Contract)',
+    type: 'Contract',
+    period: 'Mar 2025 – May 2025',
+    location: 'Remote',
     bullets: [
-      'Developed Informatica mappings to load data into staging tables and downstream data warehouse layers for a global trade repository.',
-      'Implemented business rules and integrated data from relational databases and flat-file sources.',
-      'Implemented Change Data Capture (CDC) for staging using mapping parameters and worked with Mapping Parameters, Mapping Variables, and Session Variables.',
-      'Designed ETL workflows using Lookup, Router, Filter, Source Qualifier, Aggregator, Joiner, and Sorter transformations.',
-      'Developed reusable transformations, reusable mappings, and Mapplets to improve ETL modularity and minimize duplicate logic.',
-      'Monitored daily ETL loads, analyzed job failures, performed root-cause analysis, and resolved failures according to defined processes and SLAs.',
-      'Performed performance tuning for long-running Informatica jobs at mapping, session, and SQL levels.',
-      'Automated and scheduled Informatica workflows and performed unit and system testing of developed mappings.',
-      'Created test plans, test cases, and test scripts based on mapping documents and testing strategies.',
-      'Performed small enhancements and supported production ETL workflows.',
+      'Diagnosed and resolved production bugs across multiple Laravel modules, improving application stability and user experience.',
+      'Created and maintained technical documentation for APIs, modules, and workflows to support onboarding and long-term maintainability.',
+      'Refactored backend code to improve performance, readability, and adherence to Laravel best practices.',
+      'Developed and integrated new backend features based on evolving product requirements.',
     ],
     accent: '#006c46',
+  },
+  {
+    company: 'Yantravyuh LLP',
+    role: 'Full Stack Developer Intern',
+    type: 'Internship',
+    period: 'Jun 2024 – Feb 2025',
+    location: 'Thane, Maharashtra',
+    bullets: [
+      'Enhanced frontend components and layouts using Vue.js to improve usability and responsiveness.',
+      'Delivered backend features and bug fixes in PHP/Laravel to ensure reliable end-to-end platform functionality.',
+      'Refactored Laravel and Vue.js components to improve performance, scalability, and code maintainability.',
+      'Prepared clear technical documentation to support development workflows and cross-team collaboration.',
+    ],
+    accent: '#0d1c2f',
   },
 ];
 
 const projects = [
   {
-    title: 'Ilusion Vault — Zero-Knowledge Encrypted Platform',
-    subtitle: 'Creator & Full-Stack Developer',
-    tags: ['Laravel', 'Vue.js', 'TypeScript', 'Inertia.js', 'WebCrypto API', 'Cloudflare R2', 'MySQL', 'Tailwind CSS'],
+    title: 'Kesari Awayddings',
+    subtitle: 'Destination Wedding Platform',
+    tags: ['Vue.js', 'Laravel', 'MySQL'],
+    accent: '#00cc88',
+    bullets: [
+      'Implemented a complete booking workflow for destination weddings across India, including venue discovery, guest management, menu selection, and payment processing.',
+    ],
+  },
+  {
+    title: 'LongLif- Personal AI Consultant',
+    subtitle: 'AI Emotion & Schedule Consultant',
+    tags: ['Python', 'Colab', 'Hugging-Face', 'Modal', 'Vercel', 'NextJS'],
+    accent: '#0078D4',
+    bullets: [
+      'Auto-tuned the Qwen 7B AI model for managing the time and emotions of an individual on Google Colab, hosting it on Modal cloud hosting.',
+      'Called the exposed API of the model from a React frontend for better integration with the consultant.',
+    ],
+  },
+  {
+    title: 'Mock Backend APIs Platform',
+    subtitle: 'Developer API Mocking Platform',
+    tags: ['Next.js', 'Django', 'MySQL'],
     accent: '#006c46',
-    link: null,
     bullets: [
-      'Built and shipped a full-stack, zero-knowledge encrypted file vault and secret sharing platform from scratch — end-to-end architecture, development, and deployment.',
-      'Implemented client-side AES-GCM encryption using the WebCrypto API, ensuring files are encrypted before leaving the browser — the server never sees plaintext data.',
-      'Designed a secure vault file management system with folder hierarchy, drag-and-drop uploads, and pre-signed Cloudflare R2/S3 direct-to-storage transfers.',
-      'Built self-destructing secret sharing with configurable expiry, view limits, and optional password protection.',
-      'Developed a responsive, production-grade dashboard with real-time activity logs, storage quota tracking, and file sharing permissions.',
-      'Architected the Laravel backend with Inertia.js for seamless SPA routing, strict CSP security headers, and comprehensive middleware stack.',
+      'Built a customizable mock server platform allowing dynamic API route creation, configurable request types, and user-defined responses for rapid frontend development.',
     ],
-  },
-  {
-    title: 'Ilusion Vault — Microsoft Fabric Data Engineering',
-    subtitle: 'Data Engineering Project',
-    tags: ['Microsoft Fabric', 'Azure SQL Server', 'Lakehouse', 'Dataflow Gen2', 'Warehouse', 'Power BI'],
-    accent: '#0078D4',
-    link: null,
-    bullets: [
-      'Designed and implemented an end-to-end Microsoft Fabric medallion architecture, organizing data across Bronze, Silver, and Gold layers.',
-      'Built a Bronze Lakehouse and used a Fabric Copy Job to incrementally ingest operational data from Azure SQL Server into the data platform.',
-      'Implemented the Silver transformation layer using Materialized Lake Views and Dataflow Gen2 to clean, transform, and prepare data for analytical workloads.',
-      'Built the Gold layer in a Fabric Warehouse, creating curated datasets optimized for reporting and business analytics.',
-      'Connected the Gold Warehouse to Power BI and developed an interactive dashboard for monitoring and analyzing application data.',
-    ],
-  },
-];
-
-const certifications = [
-  {
-    title: 'Microsoft Certified: Fabric Data Engineer Associate',
-    badgeName: 'DP-700',
-    issuer: 'Microsoft',
-    issueDate: 'Sep 2026',
-    expiryDate: 'Sep 2027',
-    credentialId: '39D45A75476D666',
-    certNumber: '64B499-B8ED83',
-    url: 'https://learn.microsoft.com/api/credentials/share/en-us/ShreyashPawar-7164/39D45A75476D666?sharingId',
-    accent: '#0078D4',
-    skills: [
-      'Ingest & Transform Data',
-      'Lakehouse & Warehouse Modeling',
-      'Medallion Architecture (Bronze/Silver/Gold)',
-      'Dataflow Gen2 & Copy Jobs',
-      'PySpark & Delta Lake',
-      'Monitor & Optimize Analytics Solutions',
-    ],
-    description: 'Demonstrates technical expertise in designing, building, and maintaining enterprise analytics and data engineering solutions using Microsoft Fabric — encompassing data ingestion, Lakehouse/Warehouse modeling, Delta tables, transformation pipelines, and analytics optimization.',
   },
 ];
 
@@ -127,30 +99,35 @@ const education = [
   {
     institution: 'University of Mumbai',
     degree: 'Bachelor of Engineering in Information Technology',
-    period: 'Nov 2022 – Jul 2025',
-    location: 'Thane',
-    description: 'Coursework: Data Structures, Algorithms, Databases, Computer Systems, Web development'
+    period: 'Nov 2022 – Jun 2025',
+    location: 'Thane, Maharashtra',
+  },
+  {
+    institution: 'Puranmal Lahoti Government Polytechnic',
+    degree: 'Diploma in Information Technology',
+    period: 'Aug 2019 – Jul 2022',
+    location: 'Latur, Maharashtra',
   },
 ];
 </script>
 
 <template>
   <Head>
-    <title>Shreyash Pawar — ETL Developer & Certified Fabric Data Engineer</title>
-    <meta name="description" content="Portfolio of Shreyash Pawar — ETL Developer specializing in Informatica PowerCenter and Microsoft Certified: Fabric Data Engineer Associate (DP-700). Creator of Ilusion Vault." />
+    <title>Shreyash Pawar — Full Stack Developer & Creator of Ilusion Vault</title>
+    <meta name="description" content="Portfolio of Shreyash Pawar — Full Stack Developer specializing in Vue.js, Laravel, and zero-knowledge encryption systems. Creator of Ilusion Vault." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://shreyash.ilusion.io/" />
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://shreyash.ilusion.io/" />
-    <meta property="og:title" content="Shreyash Pawar — ETL Developer & Certified Fabric Data Engineer" />
-    <meta property="og:description" content="ETL Developer at TCS & Microsoft Certified: Fabric Data Engineer Associate (DP-700). Creator of Ilusion Vault." />
+    <meta property="og:title" content="Shreyash Pawar — Full Stack Developer & Creator of Ilusion Vault" />
+    <meta property="og:description" content="Portfolio of Shreyash Pawar — Full Stack Developer specializing in Vue.js, Laravel, and zero-knowledge encryption systems. Creator of Ilusion Vault." />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Shreyash Pawar — ETL Developer & Certified Fabric Data Engineer" />
-    <meta name="twitter:description" content="ETL Developer at TCS & Microsoft Certified: Fabric Data Engineer Associate (DP-700). Creator of Ilusion Vault." />
+    <meta name="twitter:title" content="Shreyash Pawar — Full Stack Developer & Creator of Ilusion Vault" />
+    <meta name="twitter:description" content="Portfolio of Shreyash Pawar — Full Stack Developer specializing in Vue.js, Laravel, and zero-knowledge encryption systems. Creator of Ilusion Vault." />
   </Head>
 
   <div class="portfolio-page bg-[#f7f9fb] text-[#191c1e] min-h-screen flex flex-col dot-grid">
@@ -163,15 +140,27 @@ const education = [
           Shreyash Pawar
         </span>
         <div class="flex items-center gap-3">
-          <a href="#certifications" class="pf-nav-link hidden sm:inline-flex">
-            <span class="material-symbols-outlined text-[16px] text-[#0078D4]">verified</span>
-            Certifications
+          <a href="#experience" class="pf-nav-link hidden sm:inline-flex">
+            <span class="material-symbols-outlined text-[16px]">work</span>
+            Experience
           </a>
-          <a href="mailto:shreyash.pawarr1@gmail.com" class="pf-nav-link hidden sm:inline-flex">
+          <a href="#projects" class="pf-nav-link hidden sm:inline-flex">
+            <span class="material-symbols-outlined text-[16px]">code</span>
+            Projects
+          </a>
+          <a href="#education" class="pf-nav-link hidden sm:inline-flex">
+            <span class="material-symbols-outlined text-[16px]">school</span>
+            Education
+          </a>
+          <a href="mailto:shreyashrpawar28@gmail.com" class="pf-nav-link hidden sm:inline-flex">
             <span class="material-symbols-outlined text-[16px]">mail</span>
             Contact
           </a>
-          <a href="https://www.linkedin.com/in/shreyash-pawar-a59739424/" target="_blank" rel="noopener noreferrer" class="pf-nav-link hidden sm:inline-flex">
+          <a href="/shreyash_pawar.pdf" download="shreyash_pawar.pdf" target="_blank" class="pf-nav-resume">
+            <span class="material-symbols-outlined text-[16px]">download</span>
+            Resume
+          </a>
+          <a href="https://www.linkedin.com/in/shreyash-pawar28/" target="_blank" rel="noopener noreferrer" class="pf-nav-link hidden sm:inline-flex">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
             LinkedIn
           </a>
@@ -204,43 +193,59 @@ const education = [
                   <span class="badge-dot"></span>
                   Available for opportunities
                 </span>
-                <a :href="certifications[0].url" target="_blank" rel="noopener noreferrer" class="badge-cert" title="View Microsoft Certified: Fabric Data Engineer Associate Credential">
-                  <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                    <rect x="2" y="2" width="9.5" height="9.5" rx="1" fill="#F25022"/>
-                    <rect x="12.5" y="2" width="9.5" height="9.5" rx="1" fill="#7FBA00"/>
-                    <rect x="2" y="12.5" width="9.5" height="9.5" rx="1" fill="#00A4EF"/>
-                    <rect x="12.5" y="12.5" width="9.5" height="9.5" rx="1" fill="#FFB900"/>
-                  </svg>
-                  <span>DP-700 Certified · Fabric Data Engineer</span>
-                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
-                </a>
               </div>
               <h1 class="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-bold leading-none tracking-tight text-[#191c1e] mb-3">
                 Shreyash<br /><span class="text-accent">Pawar</span>
               </h1>
-              <p class="font-body text-base sm:text-lg text-[#3c4a41] mb-6 max-w-xl leading-relaxed">
-                ETL Developer with 2.5+ years of experience in Data Warehousing and BI, specializing in Informatica PowerCenter &amp; Microsoft Fabric. Certified Fabric Data Engineer Associate (DP-700) and creator of <span class="text-accent font-semibold">Ilusion Vault</span> — a zero-knowledge encrypted platform.
+              <p class="font-body text-base sm:text-lg text-[#3c4a41] mb-5 max-w-xl leading-relaxed">
+                Full Stack Developer &amp; Creator of <span class="text-accent font-semibold">Ilusion Vault</span> — specializing in Vue.js, Laravel, zero-knowledge encryption, and high-performance modern web platforms.
               </p>
+
+              <!-- Resume Actions -->
+              <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-6">
+                <a
+                  href="/shreyash_pawar.pdf"
+                  download="shreyash_pawar.pdf"
+                  target="_blank"
+                  class="download-btn"
+                >
+                  <span class="material-symbols-outlined text-[18px]">download</span>
+                  <span>Download Resume</span>
+                </a>
+                <a
+                  href="/shreyash_pawar.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="preview-btn"
+                >
+                  <span class="material-symbols-outlined text-[18px]">visibility</span>
+                  <span>View PDF</span>
+                </a>
+              </div>
 
               <!-- Contact row -->
               <div class="flex flex-wrap justify-center md:justify-start gap-2.5 mb-3">
-                <a href="mailto:shreyash.pawarr1@gmail.com" class="chip-btn">
+                <a href="mailto:shreyashrpawar28@gmail.com" class="chip-btn">
                   <span class="material-symbols-outlined text-[16px]">mail</span>
-                  shreyash.pawarr1@gmail.com
+                  shreyashrpawar28@gmail.com
                 </a>
-                <a href="tel:8459032640" class="chip-btn">
+                <a href="tel:9420784253" class="chip-btn">
                   <span class="material-symbols-outlined text-[16px]">call</span>
-                  8459032640
+                  9420784253
                 </a>
                 <span class="chip-info">
                   <span class="material-symbols-outlined text-[16px]">location_on</span>
-                  Thane
+                  Thane, Maharashtra
                 </span>
+                <a href="https://shreyash.ilusion.io" target="_blank" rel="noopener noreferrer" class="chip-btn">
+                  <span class="material-symbols-outlined text-[16px]">language</span>
+                  shreyash.ilusion.io
+                </a>
               </div>
 
               <!-- Social row -->
               <div class="flex flex-wrap justify-center md:justify-start gap-2.5">
-                <a href="https://www.linkedin.com/in/shreyash-pawar-a59739424/" target="_blank" rel="noopener noreferrer" class="chip-btn">
+                <a href="https://www.linkedin.com/in/shreyash-pawar28/" target="_blank" rel="noopener noreferrer" class="chip-btn">
                   <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
                   LinkedIn
                 </a>
@@ -258,23 +263,8 @@ const education = [
         </div>
       </section>
 
-      <!-- Skills -->
-      <section class="section-wrapper">
-        <div class="max-w-5xl mx-auto px-4 sm:px-8">
-          <h2 class="section-title">Technical Skills</h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div v-for="(items, category) in skills" :key="category" class="vault-card p-5 rounded-xl">
-              <h3 class="font-label-sm text-xs text-[#006c46] uppercase tracking-widest mb-3">{{ category }}</h3>
-              <div class="flex flex-wrap gap-1.5">
-                <span v-for="skill in items" :key="skill" class="skill-tag">{{ skill }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Experience -->
-      <section class="section-wrapper bg-white border-y border-[#e0e3e5]">
+      <section id="experience" class="section-wrapper bg-white border-y border-[#e0e3e5]">
         <div class="max-w-5xl mx-auto px-4 sm:px-8">
           <h2 class="section-title">Experience</h2>
           <div class="relative">
@@ -287,7 +277,7 @@ const education = [
                   <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
                     <div>
                       <h3 class="font-semibold text-[#191c1e] text-lg leading-tight">{{ exp.company }}</h3>
-                      <p class="text-sm text-[#3c4a41] font-medium">{{ exp.role }} · {{ exp.type }}</p>
+                      <p class="text-sm text-[#3c4a41] font-medium">{{ exp.role }} · <span class="text-[#515f74]">{{ exp.location }}</span></p>
                     </div>
                     <span class="period-badge">{{ exp.period }}</span>
                   </div>
@@ -305,7 +295,7 @@ const education = [
       </section>
 
       <!-- Projects -->
-      <section class="section-wrapper">
+      <section id="projects" class="section-wrapper">
         <div class="max-w-5xl mx-auto px-4 sm:px-8">
           <h2 class="section-title">Projects</h2>
           <div class="flex flex-col gap-6">
@@ -321,10 +311,6 @@ const education = [
                     <span v-for="tag in proj.tags" :key="tag" class="skill-tag" :style="{ borderColor: proj.accent + '40', color: proj.accent }">{{ tag }}</span>
                   </div>
                 </div>
-                <a v-if="proj.link" :href="proj.link" target="_blank" rel="noopener noreferrer" class="chip-btn !text-white !bg-[#191c1e] hover:!bg-[#006c46] transition-colors flex-shrink-0 self-start">
-                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                  View Source
-                </a>
               </div>
               <ul class="space-y-2">
                 <li v-for="(b, j) in proj.bullets" :key="j" class="flex items-start gap-2 text-sm text-[#3c4a41] leading-relaxed">
@@ -337,112 +323,8 @@ const education = [
         </div>
       </section>
 
-      <!-- Licenses & Certifications -->
-      <section id="certifications" class="section-wrapper bg-white border-y border-[#e0e3e5]">
-        <div class="max-w-5xl mx-auto px-4 sm:px-8">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-8">
-            <h2 class="section-title !mb-0">Licenses &amp; Certifications</h2>
-            <span class="text-xs font-semibold text-[#0078D4] bg-[#0078D4]/10 border border-[#0078D4]/20 px-2.5 py-1 rounded-full flex items-center gap-1.5 self-start sm:self-auto">
-              <span class="material-symbols-outlined text-[15px] text-[#0078D4]">verified</span>
-              Microsoft Certified Official Credential
-            </span>
-          </div>
-
-          <div class="flex flex-col gap-6">
-            <div
-              v-for="(cert, i) in certifications"
-              :key="i"
-              class="cert-card vault-card rounded-2xl p-6 sm:p-8 relative overflow-hidden border-[#0078D4]/30 hover:border-[#0078D4]"
-            >
-              <div class="cert-glow"></div>
-
-              <div class="relative z-10 flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-                <!-- Left Details -->
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-start gap-4">
-                    <!-- Microsoft Badge Logo -->
-                    <div class="w-13 h-13 sm:w-16 sm:h-16 rounded-xl bg-[#f0f6ff] border border-[#0078D4]/25 flex items-center justify-center flex-shrink-0 shadow-sm p-3">
-                      <svg class="w-full h-full" viewBox="0 0 24 24" fill="none">
-                        <rect x="1" y="1" width="10" height="10" rx="1.5" fill="#F25022"/>
-                        <rect x="13" y="1" width="10" height="10" rx="1.5" fill="#7FBA00"/>
-                        <rect x="1" y="13" width="10" height="10" rx="1.5" fill="#00A4EF"/>
-                        <rect x="13" y="13" width="10" height="10" rx="1.5" fill="#FFB900"/>
-                      </svg>
-                    </div>
-
-                    <div class="flex-1 min-w-0">
-                      <div class="flex flex-wrap items-center gap-2 mb-1.5">
-                        <span class="px-2 py-0.5 rounded text-[11px] font-bold tracking-wider uppercase bg-[#0078D4] text-white">
-                          {{ cert.badgeName }}
-                        </span>
-                        <span class="inline-flex items-center gap-1 text-xs font-semibold text-[#0078D4] bg-[#eef5fc] px-2 py-0.5 rounded border border-[#0078D4]/20">
-                          <span class="material-symbols-outlined text-[13px]">verified</span>
-                          Verified Credential
-                        </span>
-                      </div>
-
-                      <h3 class="font-display text-xl sm:text-2xl font-bold text-[#191c1e] leading-snug">
-                        {{ cert.title }}
-                      </h3>
-                      <p class="text-sm font-medium text-[#515f74] mt-0.5">
-                        Issued by <strong class="text-[#191c1e]">{{ cert.issuer }}</strong> · Valid: {{ cert.issueDate }} – {{ cert.expiryDate }}
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="text-sm text-[#3c4a41] leading-relaxed mt-4 mb-4">
-                    {{ cert.description }}
-                  </p>
-
-                  <!-- Skills tags -->
-                  <div class="mb-4">
-                    <span class="block text-xs font-semibold text-[#515f74] uppercase tracking-wider mb-2">Skills Measured &amp; Verified</span>
-                    <div class="flex flex-wrap gap-1.5">
-                      <span
-                        v-for="s in cert.skills"
-                        :key="s"
-                        class="skill-tag !bg-[#f0f6ff] !text-[#005a9e] !border-[#0078D4]/20"
-                      >
-                        {{ s }}
-                      </span>
-                    </div>
-                  </div>
-
-                  <!-- Credential ID & Cert Number -->
-                  <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[#515f74] pt-3 border-t border-[#e0e3e5]">
-                    <div>
-                      Credential ID: <span class="font-mono font-semibold text-[#191c1e] bg-[#f7f9fb] px-1.5 py-0.5 rounded border border-[#e0e3e5]">{{ cert.credentialId }}</span>
-                    </div>
-                    <div>
-                      Certification Number: <span class="font-mono font-semibold text-[#191c1e] bg-[#f7f9fb] px-1.5 py-0.5 rounded border border-[#e0e3e5]">{{ cert.certNumber }}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Right Action Button -->
-                <div class="flex md:flex-col items-start md:items-end justify-between gap-3 flex-shrink-0 pt-2 md:pt-0">
-                  <a
-                    :href="cert.url"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="verify-cert-btn"
-                  >
-                    <span>Verify Credential</span>
-                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
-                  </a>
-                  <span class="text-[11px] text-[#515f74] flex items-center gap-1">
-                    <span class="material-symbols-outlined text-[13px] text-[#0078D4]">link</span>
-                    learn.microsoft.com
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Education -->
-      <section class="section-wrapper">
+      <section id="education" class="section-wrapper bg-white border-t border-[#e0e3e5]">
         <div class="max-w-5xl mx-auto px-4 sm:px-8">
           <h2 class="section-title">Education</h2>
           <div class="flex flex-col gap-4">
@@ -450,7 +332,6 @@ const education = [
               <div>
                 <h3 class="font-semibold text-[#191c1e]">{{ edu.institution }}</h3>
                 <p class="text-sm text-[#3c4a41]">{{ edu.degree }}</p>
-                <p class="text-xs text-[#515f74] mt-1">{{ edu.description }}</p>
                 <p class="text-xs text-[#515f74] mt-1 flex items-center gap-1">
                   <span class="material-symbols-outlined text-[14px]">location_on</span>
                   {{ edu.location }}
@@ -478,8 +359,8 @@ const education = [
             </div>
             <!-- Right: LinkedIn Badge Widget -->
             <div class="flex-shrink-0">
-              <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="shreyash-pawar-a59739424" data-version="v1">
-                <a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/shreyash-pawar-a59739424?trk=profile-badge"></a>
+              <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="shreyash-pawar28" data-version="v1">
+                <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/shreyash-pawar28?trk=profile-badge"></a>
               </div>
             </div>
           </div>
@@ -494,7 +375,11 @@ const education = [
             <h2 class="font-display text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-[#191c1e] mb-3 relative z-10">Let's build something together</h2>
             <p class="text-[#3c4a41] mb-8 relative z-10 max-w-md mx-auto">Open to full-time roles, freelance contracts, and interesting collaborations.</p>
             <div class="flex flex-wrap justify-center gap-4 relative z-10">
-              <a href="mailto:shreyash.pawarr1@gmail.com" class="cta-primary">
+              <a href="/shreyash_pawar.pdf" download="shreyash_pawar.pdf" target="_blank" class="cta-primary">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+                Download Resume
+              </a>
+              <a href="mailto:shreyashrpawar28@gmail.com" class="cta-secondary">
                 <span class="material-symbols-outlined text-[18px]">mail</span>
                 Get in Touch
               </a>
@@ -502,7 +387,7 @@ const education = [
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 View GitHub
               </a>
-              <a href="https://www.linkedin.com/in/shreyash-pawar-a59739424/" target="_blank" rel="noopener noreferrer" class="cta-secondary">
+              <a href="https://www.linkedin.com/in/shreyash-pawar28/" target="_blank" rel="noopener noreferrer" class="cta-secondary">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
                 LinkedIn
               </a>
@@ -522,9 +407,9 @@ const education = [
       <div class="pf-footer-inner">
         <span class="text-xs text-[#515f74]">© {{ new Date().getFullYear() }} Shreyash Pawar</span>
         <div class="flex items-center gap-4">
-          <a href="mailto:shreyash.pawarr1@gmail.com" class="text-xs text-[#515f74] hover:text-[#006c46] transition-colors">shreyash.pawarr1@gmail.com</a>
+          <a href="mailto:shreyashrpawar28@gmail.com" class="text-xs text-[#515f74] hover:text-[#006c46] transition-colors">shreyashrpawar28@gmail.com</a>
           <a href="https://github.com/shreyashrpawar" target="_blank" rel="noopener noreferrer" class="text-xs text-[#515f74] hover:text-[#006c46] transition-colors font-semibold">GitHub</a>
-          <a href="https://www.linkedin.com/in/shreyash-pawar-a59739424/" target="_blank" rel="noopener noreferrer" class="text-xs text-[#515f74] hover:text-[#006c46] transition-colors font-semibold">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/shreyash-pawar28/" target="_blank" rel="noopener noreferrer" class="text-xs text-[#515f74] hover:text-[#006c46] transition-colors font-semibold">LinkedIn</a>
           <a href="https://medium.com/@shreyash07" target="_blank" rel="noopener noreferrer" class="text-xs text-[#515f74] hover:text-[#006c46] transition-colors font-semibold">Medium</a>
         </div>
       </div>
@@ -638,6 +523,47 @@ const education = [
   font-weight: 500;
 }
 
+/* Resume Buttons */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.65rem 1.4rem;
+  border-radius: 9px;
+  background: #006c46;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(0, 108, 70, 0.25);
+}
+.download-btn:hover {
+  background: #005033;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 108, 70, 0.35);
+}
+
+.preview-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9px;
+  border: 1px solid #bbcabe;
+  background: #fff;
+  color: #3c4a41;
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.preview-btn:hover {
+  border-color: #006c46;
+  color: #006c46;
+  background: #f0f7f4;
+}
+
 /* Sections */
 .section-wrapper {
   padding: 4rem 1rem;
@@ -730,86 +656,6 @@ const education = [
 .project-card { transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; }
 .project-card:hover { transform: translateY(-2px); }
 
-/* Certifications */
-.badge-cert {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #f0f6ff;
-  border: 1px solid rgba(0, 120, 212, 0.3);
-  color: #005a9e;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 999px;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  transition: background 0.15s, border-color 0.15s, transform 0.1s;
-}
-.badge-cert:hover {
-  background: #e1effe;
-  border-color: #0078d4;
-  transform: translateY(-1px);
-}
-.cert-card {
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-}
-.cert-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 120, 212, 0.12), 0 8px 10px -6px rgba(0, 120, 212, 0.06);
-}
-.cert-glow {
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, rgba(0, 120, 212, 0.09) 0%, transparent 70%);
-  pointer-events: none;
-}
-.verify-cert-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 0.65rem 1.25rem;
-  border-radius: 8px;
-  background: #0078D4;
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
-  box-shadow: 0 2px 8px rgba(0, 120, 212, 0.25);
-}
-.verify-cert-btn:hover {
-  background: #005a9e;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.35);
-}
-
-.context-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #515f74;
-  background: #f7f9fb;
-  border: 1px solid #e0e3e5;
-  padding: 3px 8px;
-  border-radius: 6px;
-}
-
-.tech-tag {
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 3px 9px;
-  border-radius: 5px;
-  background: #0d1c2f;
-  color: #fff;
-}
 
 /* CTA */
 .cta-glow {
@@ -928,6 +774,25 @@ const education = [
   transition: background 0.15s, transform 0.1s;
 }
 .pf-nav-btn:hover { background: #00cc88; color: #005033; transform: scale(0.97); }
+
+.pf-nav-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 7px;
+  background: rgba(0, 108, 70, 0.1);
+  border: 1px solid rgba(0, 108, 70, 0.25);
+  color: #006c46;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.pf-nav-resume:hover {
+  background: #006c46;
+  color: #fff;
+}
 
 /* Standalone Portfolio Footer */
 .pf-footer {
